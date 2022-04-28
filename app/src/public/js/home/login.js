@@ -1,6 +1,5 @@
 "use strict";
 
-console.log("a");
 // DOM Document Object Model
 // HTML에 존재하는 데이터들을 가져와서 제어할 수 있게 됨
 
@@ -15,4 +14,5 @@ function login() {
     id: id.value,
     psword: psword.vlaue,
   };
+  console.log("hi");
 }
