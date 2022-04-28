@@ -14,5 +14,14 @@ function login() {
     id: id.value,
     psword: psword.vlaue,
   };
-  console.log("hi");
+  // rest api
+  // 내가 전송하는 데이터가 json 데이터라고 header에 알려줌
+  // 내가 보내는 데이터의 타입 Content Type
+  fetch("/login", {
+    method: "POST",
+    header: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(req),
+  });
 }
