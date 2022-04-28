@@ -33,6 +33,11 @@ app.set("view engine", "ejs");
 // __dirname은 app.js가 있는 위치를 가르킴
 // public 경로를 정적 경로로 추가해주겠다는 의미
 app.use(express.static(`${__dirname}/src/public`));
+// json데이터를 파싱할 수 있도록.
+app.use(express.json());
+// url을 통해 전달되는 데이터에 한글, 공백 등과 같은 문자가 포함될경우
+// 제대로 인식되지 않는 문제 해결
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/", home);
 
