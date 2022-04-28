@@ -29,6 +29,10 @@ const home = require("./src/routes/home");
 // 저장될 폴더이름을 두번째 파라미터로
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
+// 미들웨어로 정적 경로 설정
+// __dirname은 app.js가 있는 위치를 가르킴
+// public 경로를 정적 경로로 추가해주겠다는 의미
+app.use(express.static(`${__dirname}/src/public`));
 
 app.use("/", home);
 
