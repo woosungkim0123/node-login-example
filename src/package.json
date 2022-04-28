@@ -1,0 +1,30 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "main": "app.js",
+  "bin": {
+    "login": "bin/www.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "nodemon ./bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woosungkim0123/loginSystem.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/woosungkim0123/loginSystem/issues"
+  },
+  "homepage": "https://github.com/woosungkim0123/loginSystem#readme",
+  "description": ""
+}
