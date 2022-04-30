@@ -25,7 +25,18 @@ function login() {
     body: JSON.stringify(req),
   })
     .then((res) => res.json())
-    .then((res) => console.log(res));
+    .then((res) => {
+      if (res.success) {
+        location.href = "/";
+      } else {
+        alert(res.msg);
+      }
+    })
+    .catch((err) => {
+      // 에러 처리
+      console.error(new Error("로그인 중 에러 발생"));
+      console.error("로그인 중 에러 발생");
+    });
   // promise가 날라옴
   // res.json의 반환값은 promise이다. 기본 res의 반환값은 response 스트림인데 json() 메서드를 통해 response(응답) 스트림을 읽을 수 있다
   // response는 데이터가 모두 받아진 상태가 아니다 json()으로 response 스트림을 가져와 완료될떄 까지 읽는다.
