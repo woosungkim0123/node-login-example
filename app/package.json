@@ -6,10 +6,12 @@
     "login": "bin/www.js"
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.7",
     "express": "^4.18.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "winston": "^3.7.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
