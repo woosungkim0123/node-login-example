@@ -40,4 +40,9 @@ if (process.env.NODE_ENV !== "production") {
   logger.add(opts.console);
 }
 
+// morgan과 logger 같이사용
+logger.stream = {
+  write: (message, encoding) => logger.info(message, encoding),
+};
+
 module.exports = logger;

@@ -4,7 +4,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
-
+const logger = require("./src/config/logger");
 const app = express();
 // 어떤 os에서 개발하든 동일하게 환경변수를 등록하고 가져올 수 있음
 dotenv.config();
@@ -20,7 +20,7 @@ app.set("view engine", "ejs");
 app.use(express.static(`${__dirname}/src/public`));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-//app.use(morgan("dev"));
+app.use(morgan("tiny", { stream: logger.stream }));
 //app.use(morgan("common", { stream: accessLogStream }));
 
 // 스트림은 데이터가 왔다갔다 하는 연결통로
