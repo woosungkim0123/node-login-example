@@ -10,11 +10,11 @@ class User {
   async login() {
     const client = this.body;
     try {
-      const { id, psword } = await UserStorage.getUserInfo(client.id);
+      const user = await UserStorage.getUserInfo(client.id);
 
-      if (id) {
-        //id === client.id &&
-        if (psword === client.psword) {
+      if (user) {
+        //user.id === client.id &&
+        if (user.psword === client.psword) {
           return { success: true };
         }
         return { success: false, msg: "비밀번호가 틀렸습니다" };
