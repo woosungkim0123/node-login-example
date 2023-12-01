@@ -1,55 +1,47 @@
-# Node Login Example
+# Node Login System
 
-## 개요
+## Description
 
-### 설명
+A simple login system implementation using Node.js.
 
-node를 활용하여 간단하게 로그인 시스템 구현
+## Features
 
-### 기능
+- **Registration**: Users can create a new account.
+- **Login**: Users can log in to their account.
+- **Logging**: Integration of logging using Winston and Morgan.
 
-- **회원가입**
-  
-- **로그인** 
-  
-- **로깅 (winston, morgan)**
+## Installation and Running
 
-<br>
+### System Requirements
 
-## 설치 및 실행 방법
-
-### 시스템 요구사항
-
-프로젝트를 설치하고 실행하기 전에 다음 소프트웨어가 시스템에 설치되어 있어야 합니다.
-
+Before installing and running the project, ensure the following software is installed on your system:
 ```
 node 16.17.1
 npm 8.15.0
 ```
 
-### 설치
+### Installation
 
 ```
 npm install
 ```
 
-### 설정
+### Configuration
 
-1. 프로젝트 root 위치에 .env 파일 생성
-2. .env에 해당 내용 추가
+1. Create a `.env` file at the root of the project.
+2. Add the following content to the `.env` file:
    
+    ```sh
+    DB_HOST= # hostname
+    DB_PORT= # port
+    DB_USER= # username
+    DB_PASSWORD= # password
+    DB_DATABASE= # database name
     ```
-    DB_HOST=호스트명
-    DB_PORT=포트
-    DB_USER=유저명
-    DB_PASSWORD=비밀번호
-    DB_DATABASE=데이터베이스명
-    ```
-3. docs 폴더에 table.sql 실행
+3. Execute table.sql in the docs folder.
 
+### Running
 
-### 실행
-
-```
+```sh
 npm run start
 ```
