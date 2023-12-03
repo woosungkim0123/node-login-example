@@ -1,8 +1,8 @@
-# Node Login System
+# Simple Node Login Service
 
 ## Description
 
-A simple login system implementation using Node.js.
+A simple login service implementation using Node.js.
 
 ## Features
 
